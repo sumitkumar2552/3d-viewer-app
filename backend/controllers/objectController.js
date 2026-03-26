@@ -6,7 +6,7 @@ const uploadObject = async (req, res) => {
     const file = req.file
     if (!file) return res.status(400).json({ message: 'No file uploaded' })
 
-    const localUrl = `${req.protocol}://${req.get('host')}/uploads/${file.filename}`
+    const localUrl = `https://${req.get('host')}/uploads/${file.filename}`
 
     const object = await Object3D.create({
       user: req.user._id,
