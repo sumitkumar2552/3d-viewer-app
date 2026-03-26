@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-  baseURL: 'https://threed-viewer-backend-wqxw.onrender.com/'
+  baseURL: 'https://threed-viewer-backend-wqxw.onrender.com/api'
 })
 
 API.interceptors.request.use((req) => {
