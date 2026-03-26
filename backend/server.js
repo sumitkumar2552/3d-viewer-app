@@ -9,7 +9,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://threed-viewer-frontend-skfo.onrender.com'
+  ],
   credentials: true
 }))
 app.use(express.json());
