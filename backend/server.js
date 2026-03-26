@@ -8,13 +8,19 @@ connectDB();
 
 const app = express();
 
+// app.use(cors({
+//   origin: [
+//     'http://localhost:5173',
+//     'https://threed-viewer-frontend-skfo.onrender.com'
+//   ],
+//   credentials: true
+// }))
+
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://threed-viewer-frontend-skfo.onrender.com'
-  ],
-  credentials: true
+  origin: '*',
+  credentials: false
 }))
+
 app.use(express.json());
 
 app.use('/uploads', require('express').static('uploads'))
